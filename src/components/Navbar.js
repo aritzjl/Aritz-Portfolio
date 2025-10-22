@@ -3,7 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
+// Logo served from public root to allow easy swapping without rebuild
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import {
@@ -46,8 +46,8 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <strong><span className="purple">A</span>JL</strong>
+        <Navbar.Brand href="/" className="d-flex align-items-center">
+          <img src="/aritz-logo.png" alt="Aritz logo" className="logo" />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"

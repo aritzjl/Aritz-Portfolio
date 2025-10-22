@@ -160,8 +160,19 @@ button:focus {
 }
 
 .logo {
-  height: 1.4em !important;
-  width: 2.5em !important;
+  height: 48px !important;
+  width: 48px !important; /* keep square shape */
+  aspect-ratio: 1 / 1;
+  object-fit: contain; /* avoid distortion */
+  background: transparent !important; /* no dark box behind */
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    height: 40px !important;
+    width: 40px !important;
+  }
 }
 
 .navbar-nav .nav-link {
