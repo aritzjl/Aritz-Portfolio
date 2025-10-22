@@ -11,6 +11,7 @@ import paragonProElite from "../../Assets/Projects/paragon.png";
 import pradosOsunaAI from "../../Assets/Projects/prados-osuna-ai.png";
 import javierOlmoTraining from "../../Assets/Projects/javier-olmo.png";
 import obrahub360 from "../../Assets/Projects/obrahub360.png";
+import padelChiquito from "../../Assets/Projects/padelchiquito.png";
 
 function Projects() {
   return (
@@ -94,6 +95,15 @@ function Projects() {
               slug="prados-osuna-ai"
             />
           </Col>
+
+		  <Col md={4} className="project-card">
+  <ProjectCard
+    imgPath={padelChiquito}
+    title="PadelChiquito"
+    description="Plataforma web que compara palas de pádel, centraliza precios de tiendas, gestiona reseñas de usuarios y automatiza la actualización de datos con scraping y análisis técnico."
+    slug="padelchiquito"
+  />
+</Col>
 
           {/* 8. ObraHub */}
           <Col md={4} className="project-card">
