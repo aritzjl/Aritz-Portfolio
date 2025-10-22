@@ -18,7 +18,7 @@ function SkillsPage() {
           <Techstack />
 
           <h1 className="project-heading">
-            <strong className="purple">Herramientes</strong> que uso
+            <strong className="purple">Herramientes</strong> Que Uso
           </h1>
           <Toolstack />
 
