@@ -595,8 +595,29 @@ button:focus {
   outline: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
 .tech-icon-images {
+  /* fallback class used in some components - keep for compatibility */
   height: 1.6rem;
   line-height: 1.6 !important;
+}
+
+/* Force icon sizes for techstack icons regardless of SVG intrinsic dimensions */
+.tech-icons img,
+.tech-icons svg,
+.tech-icon-images {
+  width: 2rem !important;
+  height: 2rem !important;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain; /* ensure SVG preserves aspect ratio */
+}
+
+@media (max-width: 767px) {
+  .tech-icons img,
+  .tech-icons svg,
+  .tech-icon-images {
+    width: 1.6rem !important;
+    height: 1.6rem !important;
+  }
 }
 
 .quote-card-view {

@@ -10,41 +10,44 @@ function Home2() {
         <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+              DEJA QUE ME <span className="purple"> PRESENTE </span>
             </h1>
             <p className="home-about-body">
-              I’m a Software Engineer who loves transforming ideas into
-              reliable, scalable products. Over time, I’ve explored several
-              technologies and found my passion in building high-performance
-              systems and intuitive user experiences.
+              Soy <span className="purple">Aritz Jaber</span>, desarrollador de software y{" "}
+              <b className="purple">cofundador de dos empresas</b>:
+              <br />
+              <b className="purple">TenBeltz</b> y <b className="purple">Biiak</b>.
               <br />
               <br />
-              I’m proficient in
+              En mi día a día, combino desarrollo, diseño de sistemas y
+              liderazgo técnico para crear soluciones que{" "}
+              <b className="purple">
+                automatizan procesos, reducen carga manual y convierten los
+                datos en decisiones útiles.
+              </b>
+              <br />
+              <br />
+              En <b className="purple">TenBeltz</b> nos enfocamos en ayudar a
+              empresas a optimizar su operación mediante software a medida e
+              inteligencia artificial.
+              <br />
+              En <b className="purple">Biiak</b>, aplicamos{" "}
+              <b className="purple">IA privada</b> al ámbito de la{" "}
+              <b className="purple">protección social</b>, con el propósito de
+              usar la tecnología para cuidar mejor.
+              <br />
+              <br />
+              Trabajo principalmente con{" "}
               <i>
-                <b className="purple">
-                  {" "}
-                  JavaScript, C++, Rust, Node.js, and Java{" "}
-                </b>
+                <b className="purple">Python, FastAPI, React y TypeScript</b>
               </i>
-              — and I enjoy working across both backend and frontend stacks.
+              , creando sistemas escalables, seguros y con impacto real.
               <br />
               <br />
-              My key areas of interest include developing
-              <i>
-                <b className="purple">
-                  {" "}
-                  Web Applications, Blockchain Solutions,{" "}
-                </b>
-              </i>
-              and exploring new ways to bridge on-chain and off-chain systems.
-              <br />
-              <br />
-              Whenever possible, I love building projects with
-              <b className="purple"> Node.js </b> and modern frameworks like{" "}
-              <i>
-                <b className="purple">React.js</b> and{" "}
-                <b className="purple">Next.js</b>.
-              </i>
+              Creo firmemente que{" "}
+              <b className="purple">
+                la mejor tecnología es la que mejora la vida de las personas.
+              </b>
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -57,4 +60,5 @@ function Home2() {
     </Container>
   );
 }
+
 export default Home2;
