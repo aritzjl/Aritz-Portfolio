@@ -253,6 +253,8 @@ button:focus {
   background-size: cover !important;
   width: 100%;
   height: 100%;
+  /* Allow clicks and text selection to pass through the particle layer */
+  pointer-events: none !important;
 }
 
 .home-header {
@@ -353,6 +355,13 @@ button:focus {
   display: inline-block !important;
   position: relative !important;
   padding-inline-start: 0 !important;
+}
+
+/* Ensure markdown project details are selectable and above decorative layers */
+.project-markdown {
+  position: relative;
+  z-index: 2;
+  user-select: text;
 }
 
 .home-social-icons {
