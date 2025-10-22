@@ -24,15 +24,8 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={mySomnia}
-              title="MySomnia"
-              description="Aplicación web minimalista para escribir sin distracciones, con temas personalizados, asistencia por IA, voz y exportación a PDF."
-              slug="mysomnia"
-            />
-          </Col>
 
+          {/* 1. Identificador Policial */}
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={identificadorPolicial}
@@ -42,6 +35,7 @@ function Projects() {
             />
           </Col>
 
+          {/* 2. LexFirma */}
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={lexfirma}
@@ -51,6 +45,7 @@ function Projects() {
             />
           </Col>
 
+          {/* 3. OrderInn */}
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={orderinnPricePredictor}
@@ -59,7 +54,19 @@ function Projects() {
               slug="orderinn"
             />
           </Col>
-		            <Col md={4} className="project-card">
+
+          {/* 4. MySomnia */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={mySomnia}
+              title="MySomnia"
+              description="Aplicación web minimalista para escribir sin distracciones, con temas personalizados, asistencia por IA, voz y exportación a PDF."
+              slug="mysomnia"
+            />
+          </Col>
+
+          {/* 5. LexGlobal */}
+          <Col md={4} className="project-card">
             <ProjectCard
               imgPath={lexglobal}
               title="LexGlobal — Analizador judicial"
@@ -67,38 +74,47 @@ function Projects() {
               slug="lexglobal"
             />
           </Col>
-		  <Col md={4} className="project-card">
-  <ProjectCard
-    imgPath={paragonProElite}
-    title="Paragon Pro Elite"
-    description="Plataforma digital que conecta atletas, familias y profesionales del deporte, con perfiles verificados, búsqueda avanzada, recursos formativos, eventos y app instalable (PWA + Android)."
-    slug="paragon"
-  />
-</Col>
-<Col md={4} className="project-card">
-  <ProjectCard
-    imgPath={pradosOsunaAI}
-    title="Prados-Osuna AI"
-    description="Sistema inteligente integrado con MN Program que automatiza la revisión de expedientes, detecta plazos de prescripción y gestiona notificaciones legales con trazabilidad completa."
-    slug="prados-osuna-ai"
-  />
-</Col>
-<Col md={4} className="project-card">
-  <ProjectCard
-    imgPath={obrahub360}
-    title="ObraHub360"
-    description="Plataforma que conecta autónomos y empresas del sector construcción, con verificación documental mediante OCR + IA, perfiles verificados y sistema de valoraciones con suscripción premium."
-    slug="obrahub360"
-  />
-</Col>
-<Col md={4} className="project-card">
-  <ProjectCard
-    imgPath={javierOlmoTraining}
-    title="Javier Olmo Training"
-    description="Web profesional para el entrenador Javier Olmo, con área privada de ejercicios en vídeo, integración con APIs externas y renderizado SSR con Astro + Node."
-    slug="javier-olmo-training"
-  />
-</Col>
+
+          {/* 6. Paragon */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={paragonProElite}
+              title="Paragon Pro Elite"
+              description="Plataforma digital que conecta atletas, familias y profesionales del deporte, con perfiles verificados, búsqueda avanzada, recursos formativos, eventos y app instalable (PWA + Android)."
+              slug="paragon"
+            />
+          </Col>
+
+          {/* 7. Prados Osuna */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={pradosOsunaAI}
+              title="Prados-Osuna AI"
+              description="Sistema inteligente integrado con MN Program que automatiza la revisión de expedientes, detecta plazos de prescripción y gestiona notificaciones legales con trazabilidad completa."
+              slug="prados-osuna-ai"
+            />
+          </Col>
+
+          {/* 8. ObraHub */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={obrahub360}
+              title="ObraHub360"
+              description="Plataforma que conecta autónomos y empresas del sector construcción, con verificación documental mediante OCR + IA, perfiles verificados y sistema de valoraciones con suscripción premium."
+              slug="obrahub360"
+            />
+          </Col>
+
+          {/* 9. Javier Olmo */}
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={javierOlmoTraining}
+              title="Javier Olmo Training"
+              description="Web profesional para el entrenador Javier Olmo, con área privada de ejercicios en vídeo, integración con APIs externas y renderizado SSR con Astro + Node."
+              slug="javier-olmo-training"
+            />
+          </Col>
+
         </Row>
       </Container>
     </Container>
