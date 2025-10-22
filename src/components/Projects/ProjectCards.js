@@ -17,7 +17,12 @@ function ProjectCards(props) {
           <FiExternalLink />
         </Link>
       )}
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+      <Card.Img
+        variant="top"
+        src={props.imgPath}
+        alt="card-img"
+        className="project-card-img"
+      />
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Text className="project-card-description" style={{ textAlign: "justify" }}>

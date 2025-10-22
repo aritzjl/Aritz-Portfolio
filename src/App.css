@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+/* Project card thumbnail: responsive rectangular crop */
+.project-card-img {
+  width: 100%;
+  display: block;
+  /* Prefer modern browsers' aspect-ratio */
+  aspect-ratio: 16 / 9; /* change to desired ratio, e.g., 4/3 or 16/9 */
+  object-fit: cover;
+  object-position: center;
+  height: auto; /* let aspect-ratio control height */
+}
+
+/* Fallback for browsers without aspect-ratio support */
+@supports not (aspect-ratio: 1/1) {
+  .project-card-img {
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 fallback */
+    background-size: cover;
+    background-position: center;
+  }
+  /* When using img tag we need to absolutely position it inside the container */
+  .project-card-view .project-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* Ensure the Card body stack doesn't overlap the absolute-positioned image */
+  .project-card-view {
+    position: relative;
+    overflow: hidden;
+  }
+}
