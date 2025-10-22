@@ -101,6 +101,10 @@ const translations = {
     resume: {
       download: "Descargar CV",
     },
+    footer: {
+      credit:
+        'Plantilla adaptada y modificada del portfolio de <a href="https://github.com/soumyajit4419" target="_blank" rel="noreferrer noopener">soumyajit4419</a>',
+    },
   },
   en: {
     nav: {
@@ -202,6 +206,10 @@ const translations = {
     resume: {
       download: "Download CV",
     },
+    footer: {
+      credit:
+        'Portfolio template adapted and modified from <a href="https://github.com/soumyajit4419" target="_blank" rel="noreferrer noopener">soumyajit4419</a>',
+    },
   },
 };
 
@@ -252,4 +260,3 @@ export function I18nProvider({ children }) {
 export function useI18n() {
   return useContext(I18nContext);
 }
-
