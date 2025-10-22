@@ -2,8 +2,10 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import { FiExternalLink } from "react-icons/fi";
+import { useI18n } from "../../i18n/I18nContext";
 
 function ProjectCards(props) {
+  const { t } = useI18n();
   return (
     <Card className="project-card-view project-card-link-container">
       {/* Top-right link icon to details (visual affordance) */}
@@ -11,8 +13,8 @@ function ProjectCards(props) {
         <Link
           to={`/project/${props.slug}`}
           className="project-card-link-icon"
-          aria-label={`Ver detalles de ${props.title}`}
-          title="Ver detalles"
+          aria-label={t("projects.aria_view_details", props.title) || `View details of ${props.title}`}
+          title={t("projects.view_details")}
         >
           <FiExternalLink />
         </Link>

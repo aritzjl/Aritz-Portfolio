@@ -5,8 +5,10 @@ import Particle from "../Particle";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../Assets/about.png";
 // import Toolstack from "./Toolstack";
+import { useI18n } from "../../i18n/I18nContext";
 
 function About() {
+  const { t } = useI18n();
   return (
     <>
       {" "}
@@ -22,9 +24,7 @@ function About() {
                 paddingBottom: "50px",
               }}
             >
-              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-                Conoce quién <strong className="purple">soy</strong>
-              </h1>
+              <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }} dangerouslySetInnerHTML={{ __html: t("about.heading") }} />
               <Aboutcard />
             </Col>
             <Col

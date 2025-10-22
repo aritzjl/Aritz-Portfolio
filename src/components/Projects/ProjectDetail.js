@@ -5,11 +5,13 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import Particle from "../Particle";
+import { useI18n } from "../../i18n/I18nContext";
 
 function ProjectDetail() {
   const { slug } = useParams();
   const [content, setContent] = useState("");
   const [error, setError] = useState("");
+  const { lang, t } = useI18n();
 
   useEffect(() => {
     const controller = new AbortController();
@@ -17,24 +19,30 @@ function ProjectDetail() {
       try {
         setError("");
         setContent("");
-        const res = await fetch(`/projects/${slug}.md`, {
+        // Try language-specific markdown first when EN; fallback to default
+        const mdCandidate = lang === "en" ? `/projects/${slug}.en.md` : `/projects/${slug}.md`;
+        let res = await fetch(mdCandidate, {
           signal: controller.signal,
           cache: "no-cache",
         });
         if (!res.ok) {
-          throw new Error(`Detalle no encontrado: ${slug}`);
+          // fallback to default Spanish file
+          res = await fetch(`/projects/${slug}.md`, { signal: controller.signal, cache: "no-cache" });
+        }
+        if (!res.ok) {
+          throw new Error(t("projects.detail.not_found", slug));
         }
         const text = await res.text();
         setContent(text);
       } catch (e) {
         if (e.name !== "AbortError") {
-          setError(e.message || "No se pudo cargar el detalle.");
+          setError(e.message || t("projects.detail.load_error"));
         }
       }
     };
     load();
     return () => controller.abort();
-  }, [slug]);
+  }, [slug, lang, t]);
 
   const title = useMemo(() => {
     const map = {
@@ -64,7 +72,7 @@ function ProjectDetail() {
             </ReactMarkdown>
           </div>
         ) : (
-          <p style={{ color: "white" }}>Cargando contenido…</p>
+          <p style={{ color: "white" }}>{t("projects.detail.loading")}</p>
         )}
       </Container>
     </Container>

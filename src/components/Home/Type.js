@@ -1,16 +1,13 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
+import { useI18n } from "../../i18n/I18nContext";
 
 function Type() {
+  const { t } = useI18n();
   return (
     <Typewriter
       options={{
-        strings: [
-          "Desarrollador de Software",
-          "Emprendedor",
-          "Especializado en IA",
-          "Un poco friki",
-        ],
+        strings: t("home.type"),
         autoStart: true,
         loop: true,
         deleteSpeed: 50,

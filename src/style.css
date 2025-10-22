@@ -850,3 +850,51 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+/* ---- Language dropdown (Navbar) ---- */
+#lang-switcher .dropdown-toggle::after {
+  /* Hide default caret to keep it minimal */
+  display: none !important;
+}
+#lang-switcher .dropdown-toggle {
+  padding-right: 0 !important;
+}
+#lang-switcher .dropdown-menu {
+  min-width: auto !important;
+}
+/* Remove animated underline bar for the language toggle */
+#lang-switcher > a::after,
+#lang-switcher > .nav-link::after,
+#lang-switcher > .dropdown-toggle::after {
+  display: none !important;
+  width: 0 !important;
+}
+#lang-switcher > a:hover::after,
+#lang-switcher > .nav-link:hover::after,
+#lang-switcher > .dropdown-toggle:hover::after {
+  display: none !important;
+  width: 0 !important;
+}
+
+/* Stronger global override for bootstrap dropdown carets to avoid visual glitches
+   when opening/closing dropdowns. This hides the generated ::after caret and
+   removes any transition that could leave a visible artifact. It's scoped to
+   navbars and elements with nav classes to be conservative. */
+.navbar .dropdown-toggle::after,
+.nav .dropdown-toggle::after,
+.dropdown-toggle::after {
+  display: none !important;
+  content: none !important;
+  margin: 0 !important;
+  border: 0 !important;
+  transition: none !important;
+  -webkit-transition: none !important;
+}
+
+/* Also hide any caret created by pseudo-elements `::before` for dropstart variants */
+.navbar .dropdown-toggle::before,
+.nav .dropdown-toggle::before,
+.dropdown-toggle::before {
+  display: none !important;
+  content: none !important;
+}

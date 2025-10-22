@@ -10,8 +10,10 @@ import {
   AiFillGithub,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { useI18n } from "../../i18n/I18nContext";
 
 function Home() {
+  const { t } = useI18n();
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -19,14 +21,14 @@ function Home() {
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">¡HOLA!{" "}
+              <h1 style={{ paddingBottom: 15 }} className="heading">{t("home.hello")} {" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
               </h1>
 
               <h1 className="heading-name">
-                SOY
+                {t("home.i_am")}
                 <strong className="main-name"> ARITZ JABER</strong>
               </h1>
 
@@ -51,7 +53,7 @@ function Home() {
       <Container>
         <Row style={{ paddingTop: "50px", paddingBottom: "80px" }}>
           <Col md={12} className="home-about-social">
-            <h1>Encuéntrame</h1>
+            <h1>{t("home.find_me")}</h1>
 
             <ul className="home-about-social-links">
               <li className="social-icons">

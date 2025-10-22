@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
@@ -12,10 +13,20 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { useI18n } from "../i18n/I18nContext";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const { t, lang, setLang, translations } = useI18n();
+
+  const langLabel = (code) => {
+    const key = `nav.lang_${code}`;
+    const value = t(key);
+    return typeof value === "string" && !value.startsWith("nav.lang_")
+      ? value
+      : (code || "").toUpperCase();
+  };
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -52,7 +63,7 @@ function NavBar() {
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Inicio
+                <AiOutlineHome style={{ marginBottom: "2px" }} /> {t("nav.home")}
               </Nav.Link>
             </Nav.Item>
 
@@ -62,7 +73,7 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> Yo
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> {t("nav.about")}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -72,7 +83,7 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
               >
                 {/* Using a generic icon for skills */}
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> Habilidades
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> {t("nav.skills")}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -84,7 +95,7 @@ function NavBar() {
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
-                Proyectos
+                {t("nav.projects")}
               </Nav.Link>
             </Nav.Item>
 
@@ -96,10 +107,30 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> CV
+                <CgFileDocument style={{ marginBottom: "2px" }} /> {t("nav.resume")}
               </Nav.Link>
             </Nav.Item>
-
+            <NavDropdown
+              align="end"
+              id="lang-switcher"
+              title={langLabel(lang)}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {Object.keys(translations || {})
+                .filter((code) => code !== lang)
+                .map((code) => (
+                  <NavDropdown.Item
+                    key={code}
+                    onClick={() => {
+                      setLang(code);
+                      updateExpanded(false);
+                    }}
+                    aria-label={`Switch language to ${langLabel(code)}`}
+                  >
+                    {langLabel(code)}
+                  </NavDropdown.Item>
+                ))}
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>

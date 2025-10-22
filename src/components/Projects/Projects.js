@@ -12,26 +12,24 @@ import pradosOsunaAI from "../../Assets/Projects/prados-osuna-ai.png";
 import javierOlmoTraining from "../../Assets/Projects/javier-olmo.png";
 import obrahub360 from "../../Assets/Projects/obrahub360.png";
 import padelChiquito from "../../Assets/Projects/padelchiquito.png";
+import { useI18n } from "../../i18n/I18nContext";
 
 function Projects() {
+  const { t } = useI18n();
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
-        </p>
+        <h1 className="project-heading" dangerouslySetInnerHTML={{ __html: t("projects.heading") }} />
+        <p style={{ color: "white" }}>{t("projects.subheading")}</p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
 
           {/* 1. Identificador Policial */}
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={identificadorPolicial}
-              title="Identificador Policial"
-              description="Aplicación web para asistencia policial en la identificación de personas y vehículos mediante OCR e IA, con integración corporativa y registro automatizado de expedientes."
+              title={t("projects.cards.identificador-policial.title")}
+              description={t("projects.cards.identificador-policial.description")}
               slug="identificador-policial"
             />
           </Col>
@@ -40,8 +38,8 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={lexfirma}
-              title="LexFirma"
-              description="Plataforma full-stack para despachos jurídicos que automatiza tareas, organiza documentos y genera borradores legales en PDF mediante IA e integración con Google Workspace."
+              title={t("projects.cards.lexfirma.title")}
+              description={t("projects.cards.lexfirma.description")}
               slug="lexfirma"
             />
           </Col>
@@ -50,8 +48,8 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={orderinnPricePredictor}
-              title="OrderInn Price Predictor"
-              description="Sistema interno que automatiza la predicción de precios desde archivos Excel, con modelos de machine learning entrenables y versionado de scripts asistido por IA."
+              title={t("projects.cards.orderinn.title")}
+              description={t("projects.cards.orderinn.description")}
               slug="orderinn"
             />
           </Col>
@@ -60,8 +58,8 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={mySomnia}
-              title="MySomnia"
-              description="Aplicación web minimalista para escribir sin distracciones, con temas personalizados, asistencia por IA, voz y exportación a PDF."
+              title={t("projects.cards.mysomnia.title")}
+              description={t("projects.cards.mysomnia.description")}
               slug="mysomnia"
             />
           </Col>
@@ -70,8 +68,8 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={lexglobal}
-              title="LexGlobal — Analizador judicial"
-              description="Sistema que automatiza la lectura y clasificación de resoluciones judiciales en PDF usando IA semántica, mejorando la precisión y reduciendo el tiempo de revisión documental."
+              title={t("projects.cards.lexglobal.title")}
+              description={t("projects.cards.lexglobal.description")}
               slug="lexglobal"
             />
           </Col>
@@ -80,8 +78,8 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={paragonProElite}
-              title="Paragon Pro Elite"
-              description="Plataforma digital que conecta atletas, familias y profesionales del deporte, con perfiles verificados, búsqueda avanzada, recursos formativos, eventos y app instalable (PWA + Android)."
+              title={t("projects.cards.paragon.title")}
+              description={t("projects.cards.paragon.description")}
               slug="paragon"
             />
           </Col>
@@ -90,8 +88,8 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={pradosOsunaAI}
-              title="Prados-Osuna AI"
-              description="Sistema inteligente integrado con MN Program que automatiza la revisión de expedientes, detecta plazos de prescripción y gestiona notificaciones legales con trazabilidad completa."
+              title={t("projects.cards.prados-osuna-ai.title")}
+              description={t("projects.cards.prados-osuna-ai.description")}
               slug="prados-osuna-ai"
             />
           </Col>
@@ -99,8 +97,8 @@ function Projects() {
 		  <Col md={4} className="project-card">
   <ProjectCard
     imgPath={padelChiquito}
-    title="PadelChiquito"
-    description="Plataforma web que compara palas de pádel, centraliza precios de tiendas, gestiona reseñas de usuarios y automatiza la actualización de datos con scraping y análisis técnico."
+    title={t("projects.cards.padelchiquito.title")}
+    description={t("projects.cards.padelchiquito.description")}
     slug="padelchiquito"
   />
 </Col>
@@ -109,8 +107,8 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={obrahub360}
-              title="ObraHub360"
-              description="Plataforma que conecta autónomos y empresas del sector construcción, con verificación documental mediante OCR + IA, perfiles verificados y sistema de valoraciones con suscripción premium."
+              title={t("projects.cards.obrahub360.title")}
+              description={t("projects.cards.obrahub360.description")}
               slug="obrahub360"
             />
           </Col>
@@ -119,8 +117,8 @@ function Projects() {
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={javierOlmoTraining}
-              title="Javier Olmo Training"
-              description="Web profesional para el entrenador Javier Olmo, con área privada de ejercicios en vídeo, integración con APIs externas y renderizado SSR con Astro + Node."
+              title={t("projects.cards.javier-olmo-training.title")}
+              description={t("projects.cards.javier-olmo-training.description")}
               slug="javier-olmo-training"
             />
           </Col>
