@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/../Assets/AritzJaberLopesCV.pdf";
+import pdfEs from "../../Assets/../Assets/AritzJaberLopesCV-ES.pdf";
+import pdfEn from "../../Assets/../Assets/AritzJaberLopesCV-EN.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -11,7 +12,8 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
+  const pdf = lang === "en" ? pdfEn : pdfEs;
 
   useEffect(() => {
     setWidth(window.innerWidth);
