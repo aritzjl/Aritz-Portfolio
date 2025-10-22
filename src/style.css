@@ -462,6 +462,14 @@ button:focus {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
+  /* Removed heavy dark gradient to avoid a semi-opaque overlay covering content.
+     If you want a subtle background, add the class `project-section--overlay` to the
+     container or re-enable the line below with a reduced opacity value. */
+  /* background-image: var(--section-background-color) !important; */
+}
+
+/* Optional class to enable the original dark gradient overlay when needed */
+.project-section--overlay {
   background-image: var(--section-background-color) !important;
 }
 
@@ -477,7 +485,6 @@ button:focus {
   box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
   color: white !important;
   background-color: transparent !important;
-  opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
@@ -502,7 +509,7 @@ button:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.80);
   color: #ffffff;
   transition: transform 0.2s ease, background 0.2s ease;
   text-decoration: none !important;
@@ -562,13 +569,11 @@ button:focus {
 
 .card-img-top {
   padding: 20px !important;
-  opacity: 0.8 !important;
   border-radius: 10px !important;
 }
 
 .blog-img {
   padding: 0px !important;
-  opacity: 0.8 !important;
   border-radius: 0px !important;
 }
 
