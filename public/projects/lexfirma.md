@@ -2,7 +2,7 @@
 
 # LexFirma - Despacho jurídico
 
-Plataforma full-stack para la gestión inteligente de tareas, documentos y comunicaciones en un despacho jurídico.  
+Plataforma full-stack para la gestión inteligente de tareas, documentos y comunicaciones en un despacho jurídico, desarrollada para **LexFirma**.  
 Automatiza la creación de tareas a partir de emails, integra los servicios de Google (Gmail, Calendar y Drive) y asiste en la generación de escritos legales en PDF mediante IA.
 
 ---
