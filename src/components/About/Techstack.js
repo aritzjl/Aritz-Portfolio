@@ -8,6 +8,7 @@ import Django from "../../Assets/TechIcons/Django.svg";
 import Scikitlearn from "../../Assets/TechIcons/Scikitlearn.svg";
 import Selenium from "../../Assets/TechIcons/Selenium.svg";
 import Ollama from "../../Assets/TechIcons/Ollama.svg";
+import Groq from "../../Assets/TechIcons/Groq.svg";
 import Langfuse from "../../Assets/TechIcons/Langfuse.svg";
 
 // ⚙️ Infraestructura y DevOps
@@ -61,6 +62,10 @@ function Techstack() {
       <Col xs={4} md={2} className="tech-icons">
         <img src={Ollama} alt="Ollama" className="tech-icon-images" />
         <div className="tech-icons-text">Ollama</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <img src={Groq} alt="Groq" className="tech-icon-images" />
+        <div className="tech-icons-text">Groq</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <img src={Langfuse} alt="Langfuse" className="tech-icon-images" />

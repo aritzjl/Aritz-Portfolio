@@ -39,7 +39,7 @@ function Home2() {
               <br />
               Trabajo principalmente con{" "}
               <i>
-                <b className="purple">Python, FastAPI, React y TypeScript</b>
+                <b className="purple">Python, FastAPI, Ollama y Langfuse</b>
               </i>
               , creando sistemas escalables, seguros y con impacto real.
               <br />
