@@ -54,7 +54,7 @@ function ProjectDetail() {
         {error ? (
           <p style={{ color: "#ffb3b3" }}>{error}</p>
         ) : content ? (
-          <div style={{ color: "white", textAlign: "left" }}>
+          <div className="project-markdown" style={{ color: "white", textAlign: "left" }}>
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeRaw]}

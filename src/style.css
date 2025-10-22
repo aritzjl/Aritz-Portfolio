@@ -507,11 +507,17 @@ button:focus {
 
 /* Keep descriptions short on cards */
 .project-card-description {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  max-height: 4.5em; /* approximately 3 lines */
+  /* Allow full description to wrap and occupy space as needed.
+     Previously we used -webkit-line-clamp to limit to 3 lines which
+     caused the descriptions to be truncated. */
+  display: block;
+  white-space: normal;
+  overflow: visible;
+  /* clear any previous line-clamp settings */
+  -webkit-line-clamp: initial;
+  line-clamp: initial;
+  -webkit-box-orient: initial;
+  max-height: none;
 }
 
 .blog-card {
@@ -577,6 +583,20 @@ button:focus {
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;
+}
+
+/* Markdown content inside project detail */
+.project-markdown img,
+.project-markdown video,
+.project-markdown iframe {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.project-markdown img {
+  display: block;
+  margin: 1rem auto; /* center large images */
+  border-radius: 10px;
 }
 
 /* --------- */

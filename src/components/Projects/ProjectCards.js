@@ -6,7 +6,7 @@ import { FiExternalLink } from "react-icons/fi";
 function ProjectCards(props) {
   return (
     <Card className="project-card-view project-card-link-container">
-      {/* Top-right link icon to details */}
+      {/* Top-right link icon to details (visual affordance) */}
       {props.slug && (
         <Link
           to={`/project/${props.slug}`}
@@ -23,6 +23,10 @@ function ProjectCards(props) {
         <Card.Text className="project-card-description" style={{ textAlign: "justify" }}>
           {props.description}
         </Card.Text>
+        {/* Stretched link makes the whole card clickable while keeping the icon visible */}
+        {props.slug && (
+          <Link to={`/project/${props.slug}`} className="stretched-link" aria-hidden="true" />
+        )}
       </Card.Body>
     </Card>
   );
