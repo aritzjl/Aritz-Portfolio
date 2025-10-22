@@ -478,6 +478,42 @@ button:focus {
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
 }
 
+/* Make project cards able to host a top-right icon link */
+.project-card-link-container {
+  position: relative;
+}
+
+.project-card-link-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  transition: transform 0.2s ease, background 0.2s ease;
+  text-decoration: none !important;
+  z-index: 2;
+}
+
+.project-card-link-icon:hover {
+  transform: scale(1.08);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Keep descriptions short on cards */
+.project-card-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 4.5em; /* approximately 3 lines */
+}
+
 .blog-card {
   padding-top: 50px !important;
   padding-bottom: 50px !important;
