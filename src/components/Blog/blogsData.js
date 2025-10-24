@@ -7,7 +7,7 @@ import thumbPdfParse from "../../Assets/Blogs/ParsersVS.png";
 const blogs = [
   {
     slug: "pdf-parse",
-    title: "🧩 PDF Parse: cómo preparar documentos para que una IA los entienda",
+    title: "PDF Parse: cómo preparar documentos para que una IA los entienda",
     date: "2025-10-23",
     // Short summary for preview cards
     excerpt:
