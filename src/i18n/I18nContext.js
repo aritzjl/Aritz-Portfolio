@@ -7,6 +7,7 @@ const translations = {
       about: "Yo",
       skills: "Habilidades",
       projects: "Proyectos",
+      blog: "Blog",
       resume: "CV",
       lang_es: "ES",
       lang_en: "EN",
@@ -98,6 +99,9 @@ const translations = {
         loading: "Cargando contenido…",
       },
     },
+    blog: {
+      subtitle: "Ideas, notas y aprendizajes que me apetece compartir.",
+    },
     resume: {
       download: "Descargar CV",
     },
@@ -112,6 +116,7 @@ const translations = {
       about: "About",
       skills: "Skills",
       projects: "Projects",
+      blog: "Blog",
       resume: "Resume",
       lang_es: "ES",
       lang_en: "EN",
@@ -202,6 +207,9 @@ const translations = {
         load_error: "Could not load the detail.",
         loading: "Loading content…",
       },
+    },
+    blog: {
+      subtitle: "Ideas, notes and learnings I’d like to share.",
     },
     resume: {
       download: "Download CV",

@@ -5,6 +5,8 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import ProjectDetail from "./components/Projects/ProjectDetail";
+import BlogList from "./components/Blog/BlogList";
+import BlogDetail from "./components/Blog/BlogDetail";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import SkillsPage from "./components/Skills/SkillsPage";
@@ -36,15 +38,19 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/project/:slug" element={<ProjectDetail />} />
-          <Route path="/skills" element={<SkillsPage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/"/>} />
-        </Routes>
+        <main className="app-main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/project" element={<Projects />} />
+            <Route path="/project/:slug" element={<ProjectDetail />} />
+            <Route path="/blog" element={<BlogList />} />
+            <Route path="/blog/:slug" element={<BlogDetail />} />
+            <Route path="/skills" element={<SkillsPage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="*" element={<Navigate to="/"/>} />
+          </Routes>
+        </main>
         <Footer />
       </div>
     </Router>

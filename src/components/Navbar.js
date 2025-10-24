@@ -10,6 +10,7 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiOutlineRead,
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
@@ -100,6 +101,16 @@ function NavBar() {
             </Nav.Item>
 
 
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/blog"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineRead style={{ marginBottom: "2px" }} /> {t("nav.blog")}
+              </Nav.Link>
+            </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
