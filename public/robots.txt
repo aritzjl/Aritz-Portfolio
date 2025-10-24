@@ -1,3 +1,14 @@
-# https://www.robotstxt.org/robotstxt.html
+## robots.txt
+# Más info: https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
-Disallow:
+# Permite el rastreo de todo el sitio
+Allow: /
+
+# Bloquea rutas internas (añade más si las hubiera)
+Disallow: /draft/
+Disallow: /tmp/
+
+# Ubicación del sitemap (cámbialo a tu dominio real)
+# Ejemplo correcto: Sitemap: https://tu-dominio.com/sitemap.xml
+Sitemap: /sitemap.xml

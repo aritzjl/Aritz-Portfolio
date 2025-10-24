@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- IMPORTANTE: Sustituye https:/aritzjaber.com por tu dominio real -->
+
+  <!-- Páginas principales -->
+  <url>
+    <loc>https:/aritzjaber.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https:/aritzjaber.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https:/aritzjaber.com/skills</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https:/aritzjaber.com/resume</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+
+  <!-- Listados -->
+  <url>
+    <loc>https:/aritzjaber.com/project</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https:/aritzjaber.com/blog</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-24</lastmod>
+  </url>
+
+  <!-- Blog posts -->
+  <url>
+    <loc>https:/aritzjaber.com/blog/pdf-parse</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-10-24</lastmod>
+  </url>
+
+  <!-- Proyectos -->
+  <url>
+    <loc>https:/aritzjaber.com/project/identificador-policial</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https:/aritzjaber.com/project/javier-olmo-training</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https:/aritzjaber.com/project/lexfirma</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https:/aritzjaber.com/project/lexglobal</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https:/aritzjaber.com/project/mysomnia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https:/aritzjaber.com/project/obrahub360</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https:/aritzjaber.com/project/orderinn</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https:/aritzjaber.com/project/padelchiquito</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https:/aritzjaber.com/project/paragon</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https:/aritzjaber.com/project/prados-osuna-ai</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-10-22</lastmod>
+  </url>
+
+</urlset>
