@@ -109,6 +109,11 @@ const translations = {
       credit:
         'Plantilla adaptada y modificada del portfolio de <a href="https://github.com/soumyajit4419" target="_blank" rel="noreferrer noopener">soumyajit4419</a>',
     },
+    notfound: {
+      title: "Página no encontrada",
+      description: "La página que buscas no existe o fue movida.",
+      back_home: "Volver al inicio",
+    },
   },
   en: {
     nav: {
@@ -217,6 +222,11 @@ const translations = {
     footer: {
       credit:
         'Portfolio template adapted and modified from <a href="https://github.com/soumyajit4419" target="_blank" rel="noreferrer noopener">soumyajit4419</a>',
+    },
+    notfound: {
+      title: "Page not found",
+      description: "The page you’re looking for doesn’t exist or was moved.",
+      back_home: "Back to Home",
     },
   },
 };

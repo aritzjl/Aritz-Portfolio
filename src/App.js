@@ -8,14 +8,10 @@ import ProjectDetail from "./components/Projects/ProjectDetail";
 import BlogList from "./components/Blog/BlogList";
 import BlogDetail from "./components/Blog/BlogDetail";
 import Footer from "./components/Footer";
+import NotFound from "./components/NotFound";
 import Resume from "./components/Resume/ResumeNew";
 import SkillsPage from "./components/Skills/SkillsPage";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
@@ -48,7 +44,7 @@ function App() {
             <Route path="/skills" element={<SkillsPage />} />
             <Route path="/about" element={<About />} />
             <Route path="/resume" element={<Resume />} />
-            <Route path="*" element={<Navigate to="/"/>} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
