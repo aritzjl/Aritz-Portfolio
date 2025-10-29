@@ -55,6 +55,6 @@ A professional, fast and maintainable site that supports the growth of the train
 
 ---
 
-> Project by **TenBeltz** in collaboration with **Javier Olmo**.  
+> Project by **[TenBeltz](https://tenbeltz.com)** in collaboration with **Javier Olmo**.  
 > Focus on brand, performance and a private learning space for athletes.
 

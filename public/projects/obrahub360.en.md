@@ -103,6 +103,6 @@ A robust, accessible platform that digitizes the connection between professional
 
 ---
 
-> Project developed by **TenBeltz**.  
+> Project developed by **[TenBeltz](https://tenbeltz.com)**.  
 > Focus on trust, reputation and document verification via OCR + AI.
 

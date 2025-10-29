@@ -45,7 +45,7 @@ El sistema automatiza la lectura, clasificación y análisis de documentación j
 ## Explicación técnica
 
 ### Arquitectura
-- **Frontend:** interfaz web en Flask con plantillas Jinja2 y CSS personalizado (branding LexGlobal / TenBeltz).  
+- **Frontend:** interfaz web en Flask con plantillas Jinja2 y CSS personalizado (branding LexGlobal / [TenBeltz](https://tenbeltz.com)).  
 - **Backend:** módulos Python independientes (`pdf_to_text`, `ai_client`, `avp_analyzer`, `main`) para extracción, análisis y evaluación.  
 - **IA:** integración con la API de **Groq** (modelos Llama 4 Maverick / Kimi) para clasificación semántica en formato JSON.  
 - **Validación:** `Pydantic v2` garantiza que el modelo devuelva estructuras válidas (`EmbargoAnalysis`).  

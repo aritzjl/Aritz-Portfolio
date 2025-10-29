@@ -84,5 +84,5 @@ Paragon Pro Elite digitaliza la relación entre talento y oferta, simplifica la 
 
 ---
 
-> Proyecto desarrollado por **TenBeltz**.  
+> Proyecto desarrollado por **[TenBeltz](https://tenbeltz.com)**.  
 > Enfoque en comunidad deportiva, visibilidad profesional y experiencia multiplataforma (PWA + app nativa).

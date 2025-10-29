@@ -45,7 +45,7 @@ The system automates the reading, classification and analysis of judicial PDFs (
 ## Technical explanation
 
 ### Architecture
-- **Frontend:** Flask web with Jinja2 templates and custom CSS (LexGlobal / TenBeltz branding).  
+- **Frontend:** Flask web with Jinja2 templates and custom CSS (LexGlobal / [TenBeltz](https://tenbeltz.com) branding).  
 - **Backend:** independent Python modules (`pdf_to_text`, `ai_client`, `avp_analyzer`, `main`) for extraction, analysis and evaluation.  
 - **AI:** integration with **Groq** API (Llama 4 Maverick / Kimi models) for semantic JSON classification.  
 - **Validation:** `Pydantic v2` guarantees valid structures (`EmbargoAnalysis`).  

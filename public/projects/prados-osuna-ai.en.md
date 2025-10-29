@@ -93,6 +93,6 @@ An end‑to‑end tool that connects **MN Program**’s legal infrastructure wit
 
 ---
 
-> Project developed by **TenBeltz** for **Prados‑Osuna Abogados**.  
+> Project developed by **[TenBeltz](https://tenbeltz.com)** for **Prados‑Osuna Abogados**.  
 > Focus on legal automation, integration with MN Program and full traceability of communications.
 

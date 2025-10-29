@@ -100,5 +100,5 @@ Help players and coaches make informed buying decisions by comparing models usin
 ---
 
 **PadelChiquito** blends automated scraping, community and technical content to create the first racket recommendation platform truly centered on the player.  
-Built end‑to‑end by **TenBeltz**, focused on experience, reliability and scalability.
+Built end‑to‑end by **[TenBeltz](https://tenbeltz.com)**, focused on experience, reliability and scalability.
 
