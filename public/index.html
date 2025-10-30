@@ -17,6 +17,171 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+  <!-- Flowise Bubble Chat embed -->
+  <script type="module">
+    import Chatbot from 'https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js';
+    // Starter prompts by language
+    const savedLang = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || '';
+    const htmlLang = (typeof document !== 'undefined' && document.documentElement && document.documentElement.getAttribute('lang')) || '';
+    const lang = savedLang === 'en' || savedLang === 'es' ? savedLang : (htmlLang === 'en' ? 'en' : 'es');
+    const starterPrompts = lang === 'en'
+      ? [
+          'What is MySomnia?',
+          'Where does Aritz currently work?',
+        ]
+      : [
+          '¿Qué es MySomnia?',
+          '¿Dónde trabaja Aritz actualmente?',
+        ];
+    Chatbot.init({
+      chatflowid: '4e340aaa-904b-4b7f-9a72-ad9c697f8eed',
+      apiHost: 'http://allllm-flowise-c087be-84-247-183-205.traefik.me',
+      chatflowConfig: {
+        // No mostrar documentos fuente ni metadatos
+        returnSourceDocuments: false,
+      },
+      observersConfig: {
+        // observeUserInput: (text) => console.debug('userInput:', text),
+        // observeMessages: (msgs) => console.debug('messages:', msgs),
+        // observeLoading: (loading) => console.debug('loading:', loading),
+      },
+      theme: {
+        button: {
+          backgroundColor: '#be50f4',
+          right: 20,
+          bottom: 20,
+          size: 48,
+          dragAndDrop: true,
+          iconColor: 'white',
+          customIconSrc: '/aritz-logo-black.png',
+          autoWindowOpen: {
+            autoOpen: true,
+            openDelay: 2,
+            autoOpenOnMobile: false,
+          },
+        },
+        tooltip: {
+          showTooltip: true,
+          tooltipMessage: 'Hola! 👋',
+          tooltipBackgroundColor: 'black',
+          tooltipTextColor: 'white',
+          tooltipFontSize: 16,
+        },
+        disclaimer: {
+          title: 'Disclaimer',
+          message:
+            'By using this chatbot, you agree to the <a target="_blank" href="https://flowiseai.com/terms">Terms & Condition</a>',
+          textColor: 'black',
+          buttonColor: '#be50f4',
+          buttonText: 'Start Chatting',
+          buttonTextColor: 'white',
+          blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
+          backgroundColor: 'white',
+        },
+        // Keep CSS minimal and robust; Flowise injects this in its own root
+        customCSS: `
+          * { font-family: 'PT Mono', monospace !important; box-sizing: border-box; }
+
+          /* Wrap long starter prompts to avoid horizontal overflow */
+          .starter-prompts,
+          .flowise-starter-prompts,
+          .flowise-starter-container,
+          .flowise-starters,
+          .flowise-suggestions,
+          .suggestions,
+          .flowise-quick-replies {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 8px !important;
+          }
+
+          .starter-prompts > *,
+          .flowise-starter-prompts > *,
+          .flowise-starter-container > *,
+          .flowise-starters > *,
+          .flowise-suggestions > *,
+          .suggestions > *,
+          .flowise-quick-replies > * {
+            max-width: 100% !important;
+            white-space: normal !important;
+            overflow-wrap: anywhere !important;
+            word-break: break-word !important;
+            line-height: 1.25 !important;
+          }
+
+          /* Fallback: ensure any chat buttons can wrap */
+          button {
+            max-width: 100% !important;
+            white-space: normal !important;
+            overflow-wrap: anywhere !important;
+            word-break: break-word !important;
+          }
+        `,
+        chatWindow: {
+          showTitle: true,
+          // Oculta mensajes de "proceso" del agente/herramientas
+          showAgentMessages: false,
+          title: 'Aritz Assistant',
+          titleAvatarSrc: '/aritz-logo-black.png',
+          titleBackgroundColor: '#1b1a2e',
+          titleTextColor: '#ffffff',
+          welcomeMessage: '¡Hola! ¿En qué puedo ayudarte?',
+          errorMessage: 'Ha ocurrido un error. Inténtalo de nuevo.',
+          backgroundColor: '#0a0416',
+          // backgroundImage: '',
+          height: 560,
+          width: 400,
+          fontSize: 16,
+          starterPrompts,
+          starterPromptFontSize: 15,
+          clearChatOnReload: false,
+          sourceDocsTitle: 'Fuentes:',
+          renderHTML: true,
+          botMessage: {
+            backgroundColor: '#1f1430',
+            textColor: '#e5e7eb',
+            showAvatar: true,
+            avatarSrc:
+              '/aritz-logo-black.png',
+          },
+          userMessage: {
+            backgroundColor: '#be50f4',
+            textColor: '#ffffff',
+            showAvatar: true,
+            avatarSrc:
+              'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png',
+          },
+          textInput: {
+            placeholder: 'Escribe tu pregunta',
+            backgroundColor: '#0f0a1a',
+            textColor: '#e5e7eb',
+            sendButtonColor: '#be50f4',
+            maxChars: 200,
+            maxCharsWarningMessage:
+              'Has superado el límite de caracteres. Por favor, escribe menos de 200 caracteres.',
+            autoFocus: true,
+            sendMessageSound: true,
+            // sendSoundLocation: 'send_message.mp3',
+            receiveMessageSound: true,
+            // receiveSoundLocation: 'receive_message.mp3',
+          },
+          feedback: {
+            color: '#a588c0',
+          },
+          dateTimeToggle: {
+            date: true,
+            time: true,
+          },
+          footer: {
+            textColor: '#a588c0',
+            text: 'Developed by ',
+            company: 'TenBeltz',
+            companyLink: 'https://tenbeltz.com',
+          },
+        },
+      },
+    });
+  </script>
 </body>
 
 </html>
