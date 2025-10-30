@@ -33,9 +33,13 @@
           '¿Qué es MySomnia?',
           '¿Dónde trabaja Aritz actualmente?',
         ];
+    // Avoid mixed-content in production (site is https)
+    const FLOWISE_DOMAIN = 'llm.tenbeltz.com';
+    const apiHost = `https://${FLOWISE_DOMAIN}`; // use https to prevent blocking
+
     Chatbot.init({
       chatflowid: '4e340aaa-904b-4b7f-9a72-ad9c697f8eed',
-      apiHost: 'http://allllm-flowise-c087be-84-247-183-205.traefik.me',
+      apiHost,
       chatflowConfig: {
         // No mostrar documentos fuente ni metadatos
         returnSourceDocuments: false,
