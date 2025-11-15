@@ -3,6 +3,8 @@
 // Thumbnails can be imported from src assets for bundling.
 
 import thumbPdfParse from "../../Assets/Blogs/ParsersVS.png";
+import thumbLangfuse from "../../Assets/Blogs/Langfuse.png";
+import thumbGroq from "../../Assets/Blogs/Groq.png";
 
 const blogs = [
   {
@@ -14,6 +16,22 @@ const blogs = [
       "Los modelos de IA no leen PDFs directamente. Antes hay que traducirlos a datos estructurados. Comparo Unstructured, Docling y LlamaParse y cuándo usar cada uno.",
     // Requested thumbnail for this post
     thumbnail: thumbPdfParse,
+  },
+  {
+    slug: "langfuse-observability",
+    title: "Langfuse: observabilidad profesional para flujos de IA",
+    date: "2025-11-01",
+    excerpt:
+      "Langfuse agrupa sesiones y trazas para que veas qué hizo cada LLM, añade jueces para puntuar resultados y calcula costes por token.",
+    thumbnail: thumbLangfuse,
+  },
+  {
+    slug: "openai-vs-groq",
+    title: "OpenAI vs Groq: reduce tus costes de IA hasta 10x",
+    date: "2025-11-15",
+    excerpt:
+      "Groq ejecuta Llama 3.3 y Qwen más rápido y barato que OpenAI; el vídeo compara tiempos, calidad y cuándo combinar ambos.",
+    thumbnail: thumbGroq,
   },
 ];
 
